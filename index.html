@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Football Vault — legends, rising stars, iconic rivalries, historic seasons and the stories that make football unforgettable.">
+  <meta name="theme-color" content="#090c0e">
+  <title>Football Vault — Where Greatness Lives</title>
+  <link rel="preconnect" href="https://commons.wikimedia.org">
+  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <link rel="preconnect" href="https://assets.laliga.com">
+  <link rel="preconnect" href="https://assets.bundesliga.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Football Vault home"><span class="brand-icon">FV</span><span class="brand-name">FOOTBALL<span> VAULT</span></span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#legends">Legends</a><a class="nav-link" href="#players">Players</a><a class="nav-link" href="#rivalries">Rivalries</a><a class="nav-link" href="#history">History</a><a class="nav-link" href="#events">Events</a><a class="nav-link" href="#awards">Awards</a>
+    </nav>
+    <a class="topbar-cta" href="#vault-quiz">Take the quiz <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero page-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE BEAUTIFUL GAME, IMMORTALIZED</div>
+        <h1>Football is more<br>than <span>90 minutes.</span></h1>
+        <p class="hero-description">Legends who changed the game. Rivalries that split families. Seasons that looked impossible. Football Vault is a growing archive for the stories behind the sport.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#legends">Enter the vault <span>↗</span></a><a class="button button-secondary" href="#events">Explore football stories</a></div>
+        <div class="hero-footnote"><span>⚽</span> Built for the love of football. Curated, not just collected.</div>
+      </div>
+      <div class="hero-art" aria-label="Rotating football feature">
+        <img id="heroFeatureImage" class="hero-feature-image" src="assets/images/stadium at night(crazy atmosphere).PNG" alt="Electric football stadium at night">
+        <div class="hero-image-vignette"></div>
+        <div class="art-label"><span id="heroFeatureCategory">MATCHDAY ATMOSPHERE</span><span class="art-label-line"></span></div>
+        <div class="hero-art-spacer"></div>
+        <div class="art-bottom"><div><span class="art-kicker" id="heroFeatureKicker">THE GAME UNDER LIGHTS</span><h2 id="heroFeatureTitle">NIGHTS THAT<br>LIVE FOREVER.</h2><p id="heroFeatureSubtitle">Every stadium has a story.</p></div><span class="art-ball">⚽</span></div>
+        <span class="art-index" id="heroFeatureIndex">FV / 001</span>
+        <div class="hero-slide-controls"><button id="heroPrev" type="button" aria-label="Previous feature">←</button><span id="heroSlideCounter">01 / 08</span><button id="heroNext" type="button" aria-label="Next feature">→</button></div>
+      </div>
+    </section>
+
+    <section class="stats-grid page-wrap" aria-label="Football Vault statistics">
+      <article class="stat-card"><div class="stat-top"><span class="stat-label">PLAYER PROFILES</span><span class="stat-icon">♙</span></div><p class="stat-value" id="playersCount">—</p><p class="stat-caption">Legends, stars and prospects</p></article>
+      <article class="stat-card"><div class="stat-top"><span class="stat-label">STORIES & FEATURES</span><span class="stat-icon gold">✦</span></div><p class="stat-value" id="storiesCount">—</p><p class="stat-caption">Rivalries, seasons and turning points</p></article>
+      <article class="stat-card"><div class="stat-top"><span class="stat-label">COMPETITIONS</span><span class="stat-icon">◎</span></div><p class="stat-value" id="competitionsCount">—</p><p class="stat-caption">Club and international football</p></article>
+      <article class="stat-card"><div class="stat-top"><span class="stat-label">THE VAULT</span><span class="stat-icon">↗</span></div><p class="stat-value">01<span class="stat-unit"> / FV</span></p><p class="stat-caption">Where greatness lives</p></article>
+    </section>
+
+    <section class="page-wrap content-section" id="legends">
+      <div class="section-heading"><div><span class="section-kicker">THE IMMORTALS</span><h2>Legends of the <span>game.</span></h2><p class="section-description">Careers that became culture. These are the names that still shape every football debate.</p></div><span class="section-count">01 — ICONS</span></div>
+      <div class="editorial-grid legends-grid" id="legendsGrid"></div>
+    </section>
+
+    <section class="page-wrap content-section" id="players">
+      <div class="section-heading"><div><span class="section-kicker">THE PRESENT & THE NEXT WAVE</span><h2>Players to <span>know.</span></h2><p class="section-description">Search the archive, explore styles and find the next name you will be arguing about.</p></div><span class="section-count">02 — PLAYER INDEX</span></div>
+      <div class="directory-toolbar">
+        <label class="search-box" for="playerSearch"><span>⌕</span><input id="playerSearch" type="search" placeholder="Search players, nation, position or club..." autocomplete="off"><span class="search-shortcut">SEARCH</span></label>
+        <label class="select-wrap" for="countryFilter"><span class="visually-hidden">Filter by country</span><select id="countryFilter"><option value="all">All countries</option></select></label>
+        <label class="select-wrap" for="sortSelect"><span class="visually-hidden">Sort players</span><select id="sortSelect"><option value="name">Name: A–Z</option><option value="young">Rising stars first</option><option value="legend">Legends first</option></select></label>
+      </div>
+      <div class="filter-row" aria-label="Filter player profiles"><button class="filter-pill active" data-filter="all" type="button">Everyone</button><button class="filter-pill" data-filter="legend" type="button">Legends</button><button class="filter-pill" data-filter="star" type="button">Current stars</button><button class="filter-pill" data-filter="rising" type="button">Rising stars</button><button class="filter-pill" data-filter="barcelona" type="button">Barça connection</button></div>
+      <div class="results-bar"><p id="resultsLabel">Loading player archive...</p><span>PROFILE · STYLE · STORY</span></div>
+      <div class="player-grid" id="playerGrid"><p class="loading-message">Preparing the archive...</p></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No players found.</h3><p>Try another search or filter.</p></div>
+      <p class="data-note">Profiles are editorial snapshots, not live statistics. Club/award details may vary by season; follow the linked official sources for the latest information.</p>
+    </section>
+
+    <section class="page-wrap content-section" id="rivalries">
+      <div class="section-heading"><div><span class="section-kicker">90 MINUTES. GENERATIONS OF HISTORY.</span><h2>The rivalry <span>room.</span></h2><p class="section-description">The context behind football's most emotionally loaded fixtures. Open any story to read more.</p></div><span class="section-count">03 — THE FAULT LINES</span></div>
+      <div class="article-grid" id="rivalryGrid"></div>
+    </section>
+
+    <section class="page-wrap content-section" id="seasons">
+      <div class="section-heading"><div><span class="section-kicker">WHEN THE NUMBERS LOOK UNREAL</span><h2>Seasons that broke <span>the script.</span></h2><p class="section-description">One player, one team or one campaign can make the impossible feel normal.</p></div><span class="section-count">04 — UNREAL YEARS</span></div>
+      <div class="season-grid" id="seasonGrid"></div>
+    </section>
+
+    <section class="page-wrap content-section" id="what-if">
+      <div class="section-heading"><div><span class="section-kicker">THE HUMAN SIDE OF THE GAME</span><h2>What could have <span>been?</span></h2><p class="section-description">Talent is only one part of a career. Injuries, pressure, personal circumstances and timing can change everything.</p></div><span class="section-count">05 — THE WHAT-IF FILES</span></div>
+      <div class="whatif-grid" id="whatIfGrid"></div>
+    </section>
+
+    <section class="page-wrap content-section" id="history">
+      <div class="section-heading"><div><span class="section-kicker">FROM THE RULEBOOK TO THE WORLD STAGE</span><h2>A game through <span>time.</span></h2><p class="section-description">A timeline of moments and milestones worth remembering.</p></div><span class="section-count">06 — TIMELINE</span></div>
+      <div class="history-panel"><div class="history-intro"><span class="history-symbol">◷</span><div><h3>Football time machine</h3><p>Every era leaves something behind for the next one.</p></div></div><div class="history-timeline" id="historyTimeline"></div></div>
+    </section>
+
+    <section class="page-wrap content-section" id="events">
+      <div class="section-heading"><div><span class="section-kicker">THE MOMENTS THAT MADE THE NEWS</span><h2>Events & competitions <span>to revisit.</span></h2><p class="section-description">A quick route into major tournaments, league stories and memorable campaigns.</p></div><span class="section-count">07 — THE FOOTBALL CALENDAR</span></div>
+      <div class="events-grid" id="eventsGrid"></div>
+    </section>
+
+    <section class="page-wrap content-section" id="awards">
+      <div class="section-heading"><div><span class="section-kicker">INDIVIDUAL EXCELLENCE</span><h2>The Ballon d'Or <span>archive.</span></h2><p class="section-description">Selected men's winners from recent decades, with links to the official award history.</p></div><span class="section-count">08 — THE HONOURS LIST</span></div>
+      <div class="table-shell"><div class="table-header"><div><span class="table-kicker">YEAR BY YEAR</span><h3>Men's Ballon d'Or winners</h3></div><span class="table-badge">SELECTED RECORDS</span></div><div class="table-scroll"><table><thead><tr><th>YEAR</th><th>WINNER</th><th>NATION</th><th>CLUB AT AWARD TIME</th><th>NOTE</th></tr></thead><tbody id="awardTableBody"></tbody></table></div><p class="table-note">The 2020 men's Ballon d'Or was cancelled. This is a selected archive, not a complete year-by-year list.</p></div>
+      <div class="source-row"><a href="https://www.francefootball.fr/ballon-d-or/palmares/" target="_blank" rel="noreferrer">Complete official palmarès ↗</a><a href="https://www.uefa.com/ballondor/" target="_blank" rel="noreferrer">UEFA Ballon d'Or hub ↗</a></div>
+    </section>
+
+    <section class="page-wrap content-section interactive-section" id="fan-zone">
+      <div class="section-heading"><div><span class="section-kicker">YOUR TAKE, YOUR RULES</span><h2>The fan <span>zone.</span></h2><p class="section-description">Football is better when there's something to argue about. Cast a local demo vote or test your knowledge.</p></div><span class="section-count">09 — YOUR CALL</span></div>
+      <div class="fan-grid">
+        <article class="fan-card debate-card"><span class="fan-kicker">THE ETERNAL DEBATE</span><h3>Messi or Cristiano?</h3><p>Two different kinds of greatness. Pick your GOAT for this browser session.</p><div class="debate-options"><button type="button" class="debate-option" data-vote="messi"><img src="assets/images/messi with 8 ballondors.PNG" alt="Lionel Messi" loading="lazy"><span>Lionel Messi</span><strong id="messiVotes">0</strong></button><button type="button" class="debate-option" data-vote="ronaldo"><img src="assets/images/cr7 with 5 ballondors.PNG" alt="Cristiano Ronaldo" loading="lazy"><span>Cristiano Ronaldo</span><strong id="ronaldoVotes">0</strong></button></div><p class="vote-note" id="voteMessage" aria-live="polite">Demo votes live only in this page; nothing is saved or sent.</p></article>
+        <article class="fan-card quiz-card" id="vault-quiz"><span class="fan-kicker">QUICK QUIZ</span><h3>Think you know ball?</h3><p id="quizQuestion">Which nation won the 2026 men's FIFA World Cup?</p><div class="quiz-options" id="quizOptions"></div><p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p><button class="button button-secondary" id="nextQuestion" type="button">Next question →</button></article>
+      </div>
+    </section>
+
+    <section class="page-wrap content-section credits-section" id="image-credits">
+      <div class="section-heading"><div><span class="section-kicker">RESPECT THE CREATORS</span><h2>Sources & <span>image credits.</span></h2><p class="section-description">Player facts and linked stories point to official or established sources. External photo availability and reuse conditions vary.</p></div><span class="section-count">10 — SOURCES</span></div>
+      <div class="credits-panel"><p><strong>Locally supplied photos:</strong> images in <code>assets/images/</code> were supplied by the project owner.</p><p><strong>Wikimedia Commons images:</strong> open each credit to view photographer attribution and the specific license. Keep attribution with the image if its license requires it.</p><div id="imageCreditsList" class="credits-list"></div><p class="copyright-note">Some remote image providers may retain copyright and may not grant reuse rights. For a publicly released site, replace any image without an explicit reusable license with a properly licensed image or one you own. This local learning project does not claim ownership of any player photograph.</p></div>
+    </section>
+
+    <section class="page-wrap legacy-banner"><div class="legacy-ball">⚽</div><div><span class="section-kicker">EVERY ERA. EVERY LEGEND.</span><h2>The game never forgets.</h2><p>Stay for the players. Leave with a story.</p></div><a class="button button-primary" href="#home">Back to top ↑</a></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#home"><span class="brand-icon">FV</span><span class="brand-name">FOOTBALL<span> VAULT</span></span></a><p>A football culture archive made for fans.</p><a href="#image-credits">Sources & image credits</a><span class="footer-code">MINI PROJECT · CONTAINERIZATION WITH DOCKER</span></footer>
+</body>
+</html>
